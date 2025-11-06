@@ -1,3 +1,5 @@
-"scripts": {
-  "start": "node index.js"
+{
+  "rewrites": [
+    { "source": "/", "destination": "/nama-folder/index.html" }
+  ]
 }
