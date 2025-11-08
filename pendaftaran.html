@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pendaftaran Anggota - Organisasi Gereja</title>
+    <title>Pendaftaran Siswa Baru - ASAK</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="logo">
             <img src="assets/logo.png" alt="Logo Organisasi Gereja">
-            <h1>Pendaftaran Anggota Baru</h1>
+            <h1>Pendaftaran Siswa Baru</h1>
         </div>
         <nav>
             <ul>
@@ -23,17 +23,26 @@
         <section id="registration">
             <h2>Pendaftaran Anggota Baru</h2>
             <form id="registrationForm">
-                <label for="nama">Nama:</label>
-                <input type="text" id="nama" name="nama" required>
+                <label for="nama">Nama Siswa:</label>
+                <input type="text" id="nama" name="nama" required><br>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required><br>
 
                 <label for="alamat">Alamat:</label>
-                <textarea id="alamat" name="alamat" required></textarea>
+                <textarea id="alamat" name="alamat" required></textarea><br>
+                
+                <label for="Pendidikan">Asal Sekolah/Kampus: </label>
+                <textarea id="Pendidikan" name="Pendidikan" required></textarea><br>
 
-                <label for="saran">Kotak Saran/Masukan:</label>
-                <textarea id="saran" name="saran"></textarea>
+                <label for="Kelas">Kelas:</label>
+                <textarea id="Kelas" name="Kelas" required></textarea><br>
+                
+                <label for="Nama">Nama Orang Tua:</label>
+                <textarea id="Nama" name="Nama" required></textarea><br>
+                
+                <label for="lingkungan">Lingkungan:</label>
+                <textarea id="Lingkungan" name="Lingkungan" required></textarea><br>
 
                 <button type="submit">Kirim Pendaftaran</button>
             </form>
