@@ -8,7 +8,11 @@
 
 /* === Body === */
 body {
-    background-color: url("barto.jpg");
+    background-image: url("barto.jpg");
+    background-size: cover;           /* menutup seluruh layar, tanpa mengulang */
+    background-position: center center; /* posisi tengah */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #333;
     line-height: 1.6;
 }
