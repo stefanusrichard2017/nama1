@@ -10,8 +10,14 @@
     <div class="container">
         <h1>Form Upload Rapot</h1>
         <form action="#" method="post" enctype="multipart/form-data">
+            <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+
+            <label for="namakelas">Kelas:</label>
+                <input type="text" id="namakelas" name="namakelas" required>
+
             <label for="rapot">Upload Rapot (PDF/JPG):</label>
-            <input type="file" id="rapot" name="rapot" accept=".pdf,.jpg,.jpeg" required>
+                <input type="file" id="rapot" name="rapot" accept=".pdf,.jpg,.jpeg" required>
 
             <button type="submit">Kirim Rapot</button>
         </form>
