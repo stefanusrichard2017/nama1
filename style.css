@@ -8,7 +8,7 @@
 
 /* === Body === */
 body {
-    background-color: #f9fafc;
+    background-color: url("barto.jpg");
     color: #333;
     line-height: 1.6;
 }
