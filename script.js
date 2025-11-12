@@ -1,5 +1,5 @@
 // URL Google Apps Script (ganti dengan URL endpoint Anda setelah deploy)
-const scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec'; // Ganti dengan URL asli
+const scriptURL = 'https://docs.google.com/spreadsheets/d/18TPD38xi7klylnl8W8pKv59_Lbj2iKK1ijHL3Hn3xPY/edit?usp=sharing'; // Ganti dengan URL asli
 
 document.getElementById('registrationForm').addEventListener('submit', function(e) {
     e.preventDefault();
