@@ -4,7 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASAK - Ayo Sekolah Ayo Kuliah</title>
+
+    <style>
+        /* ===== POPUP / MODAL STYLE ===== */
+        .modal-bg {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .modal-box {
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            padding: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .close-btn {
+            background: #ff4d4d;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -19,9 +60,11 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#sertifikat">Sertifikat</a></li>
 
-                <!-- Ubah ini: dari link Tally menjadi scroll ke section -->
-                <li><a href="#pendaftaran">Pendaftaran</a></li>
-                <li><a href="#lapor-rapot">Lapor Rapot</a></li>
+                <!-- Trigger POPUP -->
+                <li><a href="#" id="openPendaftaran">Pendaftaran</a></li>
+
+                <!-- Bisa dibuat modal juga kalau mau -->
+                <li><a href="https://tally.so/r/QKKvMG">Lapor Rapot</a></li>
 
                 <li><a href="#donasi">Donasi</a></li>
             </ul>
@@ -65,35 +108,6 @@
             </div>
         </section>
 
-        <!-- ============================== -->
-        <!-- Pendaftaran - EMBED TALLY FORM -->
-        <!-- ============================== -->
-        <section id="pendaftaran">
-            <h2>Pendaftaran ASAK</h2>
-            <iframe 
-                src="https://tally.so/embed/gDDYDP?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1"
-                width="100%" 
-                height="800" 
-                frameborder="0" 
-                marginheight="0" 
-                marginwidth="0">
-            </iframe>
-        </section>
-
-        <!-- Lapor rapot juga aku embed sekalian -->
-        <section id="lapor-rapot">
-            <h2>Lapor Rapot ASAK</h2>
-            <iframe 
-                src="https://tally.so/embed/QKKvMG?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1"
-                width="100%" 
-                height="800" 
-                frameborder="0" 
-                marginheight="0" 
-                marginwidth="0">
-            </iframe>
-        </section>
-        <!-- ============================== -->
-
         <section id="donasi">
             <h2>Link Donasi</h2>
             <a href="https://gofundme.com/gereja-pendidikan" target="_blank">Donasi Sekarang</a>
@@ -104,6 +118,43 @@
         <p>&copy; 2023 Organisasi Gereja. Semua Hak Dilindungi.</p>
     </footer>
 
-    <script src="script.js"></script>
+
+    <!-- =============================== -->
+    <!-- POPUP MODAL UNTUK PENDAFTARAN -->
+    <!-- =============================== -->
+    <div class="modal-bg" id="modalPendaftaran">
+        <div class="modal-box">
+            <div class="close-btn" id="closePendaftaran">Tutup ✖</div>
+
+            <iframe 
+                src="https://tally.so/embed/gDDYDP?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1"
+                width="100%" 
+                height="600" 
+                frameborder="0">
+            </iframe>
+        </div>
+    </div>
+
+
+    <script>
+        // OPEN POPUP
+        document.getElementById("openPendaftaran").onclick = function() {
+            document.getElementById("modalPendaftaran").style.display = "flex";
+        };
+
+        // CLOSE POPUP
+        document.getElementById("closePendaftaran").onclick = function() {
+            document.getElementById("modalPendaftaran").style.display = "none";
+        };
+
+        // Klik di luar modal untuk menutup
+        window.onclick = function(e) {
+            let modal = document.getElementById("modalPendaftaran");
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+
 </body>
 </html>
