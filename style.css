@@ -25,11 +25,11 @@
 /* Tombol X */
 .close {
     position: absolute;
-    top: 5px;
-    right: 15px;
-    font-size: 28px;
+    top: -35px;
+    right: -20px;
+    font-size: 35px;
     cursor: pointer;
-    color: #333;
+    color: #f8f8f8;
 }
 
 
@@ -43,7 +43,7 @@
 
 /* === Body === */
 body {
-    background-image: url("assets/barto.jpg"); /* pastikan path sesuai struktur folder */
+    background-image: url("Barto.jpg"); /* pastikan path sesuai struktur folder */
     background-size: cover;           /* menutup seluruh layar */
     background-position: center center; /* posisi tengah */
     background-repeat: no-repeat;
@@ -66,7 +66,7 @@ body::before {
 header {
     background-color: rgba(44, 62, 80, 0.9); /* transparan biar nyatu dgn bg */
     color: white;
-    padding: 15px 40px;
+    padding: 5px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -127,6 +127,37 @@ section h2 {
     border-left: 5px solid #f1c40f;
     padding-left: 10px;
 }
+
+
+/* === mitra kerja sama===*/
+/* Container slider */
+.logo-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 15s linear infinite;
+}
+
+.slide-track img {
+    width: auto;
+    height: 100px;
+    margin: 0 20px;
+}
+
+/* ANIMASI PALING HALUS */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 
 /* === Paragraf === */
 p {
