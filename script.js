@@ -4,6 +4,18 @@ const scriptURL = 'https://docs.google.com/spreadsheets/d/18TPD38xi7klylnl8W8pKv
 document.getElementById('registrationForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
+
+// Buka Lightbox
+function openLightbox(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox").style.display = "flex";
+}
+
+// Tutup Lightbox
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
     // Ambil data form
     const formData = new FormData(this);
     

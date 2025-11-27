@@ -48,7 +48,7 @@ body {
     background-position: center center; /* posisi tengah */
     background-repeat: no-repeat;
     background-attachment: fixed;     /* efek parallax */
-    color: #333;
+    color: #000000;
     line-height: 1.6;
     min-height: 100vh;
 }
@@ -58,13 +58,13 @@ body::before {
     content: "";
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* lapisan transparan gelap */
+    background: rgba(22, 21, 21, 0.4); /* lapisan transparan gelap */
     z-index: -1; /* supaya tidak menutupi konten */
 }
 
 /* === Header === */
 header {
-    background-color: rgba(44, 62, 80, 0.9); /* transparan biar nyatu dgn bg */
+    background-color: rgba(105, 111, 117, 0.9); /* transparan biar nyatu dgn bg */
     color: white;
     padding: 5px 25px;
     display: flex;
@@ -79,7 +79,7 @@ header .logo {
 }
 
 header .logo img {
-    width: 60px;
+    width: 90px;
     margin-right: 15px;
 }
 
@@ -97,7 +97,7 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: 500;
     transition: 0.3s;
 }
@@ -128,6 +128,87 @@ section h2 {
     padding-left: 10px;
 }
 
+
+/* ==== KONTAINER GALERI ==== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+}
+
+/* ==== BOX PER GAMBAR ==== */
+.img-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.img-box img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Zoom lembut saat hover */
+.img-box:hover img {
+    transform: scale(1.05);
+}
+
+/* ==== DESKRIPSI POP-UP ==== */
+.img-box .desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.55); /* transparan */
+    color: white;
+    font-size: 14px;
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s ease;
+}
+
+/* Muncul saat hover */
+.img-box:hover .desc {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+}
+
+
+/* Format gambar galeri */
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
 
 /* === mitra kerja sama===*/
 /* Container slider */
@@ -196,3 +277,4 @@ footer {
         padding: 20px 15px;
     }
 }
+
